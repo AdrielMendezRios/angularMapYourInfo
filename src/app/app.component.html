@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+<h1>Your Geo-Digital Info</h1>
+<h2>have you ever wondered what the internet knows about irl!?</h2>
+<h3>wonder no more!</h3>
+<div class="container">
+<div class="mapInfo">
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+  <p>your latitude is {{lat}}</p>
+  <p>your longitude is {{lng}}</p>
+</div>
+
+<div class="yourInfoList">
+  <button (click)="displayInfo()">show your info</button>
+
+  <ul *ngIf="locArray">
+    <li *ngFor="let data of locArray">
+      <p id="title">{{data[0]}} : </p>
+      <p [ngClass]="{
+        'hideInfo' : !display,
+        'displayInfo' : display
+      }">{{data[1]}}</p> <!--*ngIf="displayInfo()" -->
+    </li>
+  </ul>
+
+</div> <!-- end of yourInfolist div-->
+</div><!-- end of conatiner div-->
+</body>
+

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+agm-map {
+    height: 400px;
+    width: 500px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 11px;
+}
+
+.mapInfo {
+    justify-self: left;
+    float: left;
+}
+
+.yourInfoList{
+    /* background: #7700FF; */
+    justify-self: left;
+    float: right;
+    width: fit-content;
+    direction: rtl;
+}
+
+.yourInfoList ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#title {
+    font-size: 15px;
+}
+
+.hideInfo {
+    /* font-size: 0px;  */
+    width: max-content;
+    visibility: hidden;
+}
+
+.displayInfo{
+    visibility: visible;
+    padding-left:.5em;
+    font-weight: 700;
+    justify-self: right;
+    font-size: 11px;
+}
+
+
+
